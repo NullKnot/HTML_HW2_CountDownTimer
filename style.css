@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div#bottomDiv{
+    margin-top:450px;
+}
+
+select#eventSelect{
+    width:25%;
+}
