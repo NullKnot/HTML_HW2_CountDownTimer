@@ -1,5 +1,5 @@
 var newTpoic, newDate, topic, dateLabel, endD, divRunningMan;
-var backgroundPhoto = new Array("BirthdayParty.jpg", "BusinessEvent.jpg", "MemorialDay.jpg");
+var backgroundPhoto = new Array("timerBackground.jpg" ,"BirthdayParty.jpg", "BusinessEvent.jpg", "MemorialDay.jpg");
 var secUnit = 1000;
 var minUnit = secUnit * 60;
 var hrUnit = minUnit * 60;
