@@ -10,7 +10,7 @@
     <h1>倒數計時器－小人跑不停</h1>
     <hr>
     <h1 id="topic">主題顯示在這裡</h1>
-    <h1 id="date">剩餘時間顯示在這裡</h1>
+    <h1 id="date">剩餘時間顯示在這裡<br>(記得輸入上/下午：幾點：幾分)</h1>
     
     <!--div為建區塊的語法-->
 	<div id="divRunningMan">
@@ -22,15 +22,15 @@
     <div id="bottomDiv">   
         <hr>
         <h1>設定用區塊</h1>
-        <input type="text" id="newTopic" size="60" placeholder="請輸入事件名稱">
-        <input type="date" id="newDate" size="60">
+        <input type="text" id="newTopic" size="40" placeholder="請輸入事件名稱">
+        <input type="datetime-local" id="newDate" size="20">
         <input type="button" id="confirBut" value="確定" onclick="setNewEvent()"> 
         <br>
         背景圖片
         <select id="eventSelect" name="type" onchange="setEventBackground()">
 			<option value="0">(請選擇事件類型)</option>
-            <option value="1">生日聚會</option>        
-            <option value="2">商務聚會</option>       
+            <option value="1">生日派對</option>        
+            <option value="2">商務會議</option>       
             <option value="3">紀念日</option>       
         </select>
     </div>

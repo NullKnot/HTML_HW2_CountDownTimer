@@ -15,9 +15,8 @@ function setNewEvent(){
     newDate = document.getElementById("newDate");
     topic = document.getElementById("topic");
     dateLabel = document.getElementById("date");
-	divRunningMan = document.getElementById("divRunningMan");
+	divRunningMan = document.getElementById("divRunningMan");	
     endD = new Date(newDate.value);
-    endD.setHours(0);
     
     topic.innerHTML = newTopic.value; 
     timeCounter = setInterval(showRemaining,1);
@@ -27,7 +26,7 @@ function showRemaining(){
     var now = new Date();
     var timeDifference = endD - now;
     var days = Math.floor(timeDifference/dayUnit);
-    var hours = Math.floor((timeDifference%dayUnit) /hrUnit);
+    var hours = (Math.floor((timeDifference%dayUnit) /hrUnit)-8); //要將現在時間減8小時校正
     var minius = Math.floor((timeDifference%hrUnit)/minUnit);
     var seconds = Math.floor((timeDifference%minUnit) / secUnit);
     imgLeftBorder = (document.body.clientWidth)/2 - 60;    
