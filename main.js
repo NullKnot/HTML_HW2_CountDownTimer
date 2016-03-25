@@ -9,6 +9,7 @@ var	imgPosCounter = 0;
 var imgPos=-60;
 var imgLeftBorder, imgRightBorder;
 var imgWayToLeft = true;
+var butFirstClick = true;
 
 function setNewEvent(){
     newTopic = document.getElementById("newTopic");
@@ -19,14 +20,17 @@ function setNewEvent(){
     endD = new Date(newDate.value);
     
     topic.innerHTML = newTopic.value; 
+	if(butFirstClick == true){
     timeCounter = setInterval(showRemaining,1);
+	butFirstClick = false;
+	}
 }
 
 function showRemaining(){
     var now = new Date();
-    var timeDifference = endD - now;
+    var timeDifference = endD - now -8*60*60*1000;
     var days = Math.floor(timeDifference/dayUnit);
-    var hours = (Math.floor((timeDifference%dayUnit) /hrUnit)-8); //要將現在時間減8小時校正
+    var hours = (Math.floor((timeDifference%dayUnit) /hrUnit)); 
     var minius = Math.floor((timeDifference%hrUnit)/minUnit);
     var seconds = Math.floor((timeDifference%minUnit) / secUnit);
     imgLeftBorder = (document.body.clientWidth)/2 - 60;    
